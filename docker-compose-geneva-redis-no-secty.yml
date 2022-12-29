@@ -304,21 +304,21 @@ services:
       - command
   #      - logging  # uncomment if re-enabled remote logging
 
-  device-random:
-    image: edgexfoundry/docker-device-random-go:1.2.1
-    ports:
-      - "127.0.0.1:49988:49988"
-    container_name: edgex-device-random
-    hostname: edgex-device-random
-    networks:
-      - edgex-network
-    environment:
-      <<: *common-variables
-      Service_Host: edgex-device-random
-    depends_on:
-      - data
-      - command
-
+#  device-random:
+#    image: edgexfoundry/docker-device-random-go:1.2.1
+#    ports:
+#      - "127.0.0.1:49988:49988"
+#    container_name: edgex-device-random
+#    hostname: edgex-device-random
+#    networks:
+#      - edgex-network
+#    environment:
+#      <<: *common-variables
+#      Service_Host: edgex-device-random
+#    depends_on:
+#      - data
+#      - command
+#
 #  device-mqtt:
 #    image: edgexfoundry/docker-device-mqtt-go:1.2.1
 #    ports:
